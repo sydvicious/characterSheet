@@ -9,13 +9,12 @@
 import SwiftUI
 
 struct CharacterList : View {
-    @State private var names = ["Pendecar", "Myrathel", "Milo"]
     
     var body: some View {
         NavigationView {
-            VStack {
-                List(names.identified(by: \.self)) { name in
-                    Text(name)
+            List(characters) {character in
+                NavigationLink(destination: CharacterView(character: character)) {
+                    Text("\(character.name)")
                 }
             }.navigationBarTitle("Pathfinder Characters")
         }
@@ -25,7 +24,12 @@ struct CharacterList : View {
 #if DEBUG
 struct CharacterList_Previews : PreviewProvider {
     static var previews: some View {
-        CharacterList()
+        ForEach(["iPhone Xr", "iPad Air (3rd generation)"], id: \.self) { deviceName in
+            CharacterList()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+        }
     }
 }
 #endif
+

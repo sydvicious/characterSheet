@@ -9,14 +9,7 @@
 import SwiftUI
 
 struct CharacterView : View {
-    @State private var name = "Pendecar"
-    
-    @State private var strength = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
-    @State private var dexterity = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
-    @State private var constitution = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
-    @State private var intelligence = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
-    @State private var wisdom = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
-    @State private var charisma = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
+    var character: Character
 
     var body: some View {
         NavigationView() {
@@ -32,24 +25,29 @@ struct CharacterView : View {
                         Text("Charisma:").bold()
                     }
                     VStack(alignment: .trailing) {
-                        Text("\(strength)")
-                        Text("\(dexterity)")
-                        Text("\(constitution)")
-                        Text("\(intelligence)")
-                        Text("\(wisdom)")
-                        Text("\(charisma)")
+                        Text("\(character.strength)")
+                        Text("\(character.dexterity)")
+                        Text("\(character.constitution)")
+                        Text("\(character.intelligence)")
+                        Text("\(character.wisdom)")
+                        Text("\(character.charisma)")
                     }.padding(.trailing)
                 }
                 Spacer()
-            }.navigationBarTitle(name)
+            }.navigationBarTitle(character.name)
         }
     }
 }
 
 #if DEBUG
+var dummyCharacter = Character(id: 1, name: "Pendecar", strength: 18, dexterity: 18, constitution: 17, intelligence: 20, wisdom: 14, charisma: 12)
 struct CharacterView_Previews : PreviewProvider {
     static var previews: some View {
-        CharacterView()
+        ForEach(["iPhone SE", "iPad Air (3rd generation)"], id: \.self) { deviceName in
+            CharacterView(character: dummyCharacter)
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+        }
     }
 }
 #endif
