@@ -12,29 +12,27 @@ struct CharacterView : View {
     var character: Character
 
     var body: some View {
-        NavigationView() {
-            VStack {
-                HStack {
-                    Spacer()
-                    VStack(alignment: .trailing) {
-                        Text("Strength:").bold()
-                        Text("Dexterity:").bold()
-                        Text("Constitution:").bold()
-                        Text("Intelligence:").bold()
-                        Text("Wisdom:").bold()
-                        Text("Charisma:").bold()
-                    }
-                    VStack(alignment: .trailing) {
-                        Text("\(character.strength)")
-                        Text("\(character.dexterity)")
-                        Text("\(character.constitution)")
-                        Text("\(character.intelligence)")
-                        Text("\(character.wisdom)")
-                        Text("\(character.charisma)")
-                    }.padding(.trailing)
-                }
+        VStack {
+            HStack {
                 Spacer()
-            }.navigationBarTitle(character.name)
+                VStack(alignment: .trailing) {
+                    Text("Strength:").bold()
+                    Text("Dexterity:").bold()
+                    Text("Constitution:").bold()
+                    Text("Intelligence:").bold()
+                    Text("Wisdom:").bold()
+                    Text("Charisma:").bold()
+                }
+                VStack(alignment: .trailing) {
+                    Text("\(character.strength)")
+                    Text("\(character.dexterity)")
+                    Text("\(character.constitution)")
+                    Text("\(character.intelligence)")
+                    Text("\(character.wisdom)")
+                    Text("\(character.charisma)")
+                }.padding(.trailing)
+            }
+            Spacer()
         }
     }
 }
