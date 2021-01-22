@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		62043FB8259AEB5E0075859D /* characterSheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = characterSheet.entitlements; sourceTree = "<group>"; };
 		620CF8A322DC319100ABF4C2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		620CF8A422DC319100ABF4C2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		625B10A322DC30D7001C4613 /* characterSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = characterSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +114,7 @@
 		625B10A522DC30D7001C4613 /* characterSheet */ = {
 			isa = PBXGroup;
 			children = (
+				62043FB8259AEB5E0075859D /* characterSheet.entitlements */,
 				62B66CA922E40F820029E108 /* Models */,
 				625B10A622DC30D7001C4613 /* AppDelegate.swift */,
 				625B10A822DC30D7001C4613 /* SceneDelegate.swift */,
@@ -466,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = characterSheet/characterSheet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "characterSheet/Preview\\ Content";
 				DEVELOPMENT_TEAM = R5PQPZARC5;
@@ -477,6 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonejarring.characterSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -486,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = characterSheet/characterSheet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "characterSheet/Preview\\ Content";
 				DEVELOPMENT_TEAM = R5PQPZARC5;
@@ -497,6 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonejarring.characterSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
