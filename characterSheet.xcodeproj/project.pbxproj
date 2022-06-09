@@ -114,12 +114,11 @@
 		625B10A522DC30D7001C4613 /* characterSheet */ = {
 			isa = PBXGroup;
 			children = (
+				62CD7600281968F7005F6926 /* Views */,
 				62043FB8259AEB5E0075859D /* characterSheet.entitlements */,
 				62B66CA922E40F820029E108 /* Models */,
 				625B10A622DC30D7001C4613 /* AppDelegate.swift */,
 				625B10A822DC30D7001C4613 /* SceneDelegate.swift */,
-				625B10DA22DC310E001C4613 /* CharacterList.swift */,
-				625B10D922DC310E001C4613 /* CharacterView.swift */,
 				625B10AF22DC30D8001C4613 /* Assets.xcassets */,
 				625B10B422DC30D8001C4613 /* LaunchScreen.storyboard */,
 				625B10B722DC30D8001C4613 /* Info.plist */,
@@ -162,6 +161,15 @@
 				62B66CAC22E410940029E108 /* Characters.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		62CD7600281968F7005F6926 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				625B10DA22DC310E001C4613 /* CharacterList.swift */,
+				625B10D922DC310E001C4613 /* CharacterView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
