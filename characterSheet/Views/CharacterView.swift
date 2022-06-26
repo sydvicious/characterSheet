@@ -39,7 +39,7 @@ struct CharacterView : View {
 var dummyCharacter = Character(id: 1, name: "Pendecar", strength: 18, dexterity: 18, constitution: 17, intelligence: 20, wisdom: 14, charisma: 12)
 struct CharacterView_Previews : PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE"], id: \.self) { deviceName in
+        ForEach(["iPhone 12"], id: \.self) { deviceName in
             CharacterView(character: dummyCharacter)
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
